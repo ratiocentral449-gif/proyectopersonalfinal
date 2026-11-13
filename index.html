@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- HTML Foundation 2.1: elementos del head -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Aulix: encuentra y comparte fotos, videos, talleres, clases virtuales y exámenes de todas las carreras.">
+  <meta name="keywords" content="universidad, talleres, clases virtuales, exámenes, fotos, videos">
+  <meta name="author" content="Proyecto personal">
+  <!-- HTML Foundation 9.1: viewport para que la página se adapte al celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulix | Encuentra y comparte contenido académico</title>
+  <!-- CSS Foundation 5.1: fuente de Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+
+  <!-- HTML Foundation 7: etiquetas semánticas (header, nav, main, section, article, aside, footer) -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio">
+        <!-- HTML Foundation 6.2: span es un elemento inline; la "A" del logo se dibuja con CSS, sin imagen -->
+        <span class="logo">A</span>
+        Aulix
+      </a>
+
+      <button id="boton-menu" class="hamburguesa" type="button" aria-label="Abrir o cerrar menú">☰ Menú</button>
+
+      <nav id="navegacion" class="navegacion">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li>
+            <!-- HTML Foundation 7.1: details y summary crean el submenú sin JavaScript -->
+            <details class="desplegable">
+              <summary>Explorar</summary>
+              <ul class="submenu">
+                <li><a href="#fotos">Fotos y videos</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#clases">Clases virtuales</a></li>
+                <li><a href="#examenes">Exámenes</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#publicaciones">Publicaciones</a></li>
+          <li><a class="boton-menu" href="#contacto">Crear cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="contenedor">
+        <div class="hero-texto">
+          <h1>Todo lo que se publica en tu universidad, en un solo lugar</h1>
+          <!-- HTML Foundation 4.1: strong, mark y em son modificadores de texto -->
+          <p>Encuentra <strong>fotos y videos</strong> de clases, talleres, clases virtuales y exámenes de <mark>cualquier carrera</mark>. <em>Compártelo y organízalo</em> con tus compañeros.</p>
+          <form class="buscador" action="#publicaciones">
+            <input type="search" name="buscar" placeholder="Buscar fotos, videos, talleres, exámenes...">
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+        <!-- aside: contenido secundario al lado del contenido principal -->
+        <aside class="aviso">
+          <p><small>Esta semana</small></p>
+          <h2>12 talleres nuevos</h2>
+          <p>3 clases virtuales en vivo hoy</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion">
+      <div class="contenedor">
+        <h2>Una plataforma para todas las carreras</h2>
+        <div class="tarjetas">
+          <article class="tarjeta"><h3>Todo en un lugar</h3><p>Fotos, videos, talleres, clases y exámenes dejan de estar repartidos en chats y carpetas.</p></article>
+          <article class="tarjeta"><h3>Organizado por carrera</h3><p>Filtra por carrera, curso o tipo de contenido y llega rápido a lo que necesitas.</p></article>
+          <article class="tarjeta"><h3>Hecho para compartir</h3><p>Publica lo que aprendes y ayuda a otros estudiantes a encontrarlo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="explorar" class="seccion gris">
+      <div class="contenedor">
+        <h2>Explora por tipo de contenido</h2>
+        <div class="tarjetas">
+          <!-- HTML Foundation 3.2: id único para cada elemento (los usa el submenú) -->
+          <article id="fotos" class="tarjeta"><h3>Fotos y videos</h3><p>De clases, ferias y eventos de cualquier carrera.</p></article>
+          <article id="talleres" class="tarjeta"><h3>Talleres</h3><p>Material y registro de talleres nuevos cada semana.</p></article>
+          <article id="clases" class="tarjeta"><h3>Clases virtuales</h3><p>Grabaciones y clases en vivo, listas para repasar.</p></article>
+          <article id="examenes" class="tarjeta"><h3>Exámenes</h3><p>Prácticas y exámenes anteriores para prepararte.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicaciones" class="seccion">
+      <div class="contenedor">
+        <h2>Publicaciones recientes</h2>
+        <div class="tarjetas">
+          <!-- HTML Foundation 3.1: class permite aplicar el mismo estilo a varios elementos -->
+          <article class="tarjeta"><div class="foto foto1"></div><h3>Taller de Diseño UX</h3><p>Ingeniería de Sistemas</p><p><small>3 videos · 24 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto2"></div><h3>Clase virtual: Excel</h3><p>Administración</p><p><small>Grabación · 1 h 20 min</small></p></article>
+          <article class="tarjeta"><div class="foto foto3"></div><h3>Examen parcial de Estadística</h3><p>Ingeniería Industrial</p><p><small>PDF · 12 preguntas</small></p></article>
+          <article class="tarjeta"><div class="foto foto4"></div><h3>Feria de Psicología</h3><p>Psicología</p><p><small>48 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto5"></div><h3>Taller de Primeros Auxilios</h3><p>Enfermería</p><p><small>2 videos · 15 fotos</small></p></article>
+          <article class="tarjeta"><div class="foto foto6"></div><h3>Clase virtual: Marketing Digital</h3><p>Administración</p><p><small>Grabación · 2 h</small></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion gris">
+      <div class="contenedor">
+        <h2>Empieza a compartir</h2>
+        <!-- HTML Foundation 8: formulario con form, fieldset, legend, label, input, select, textarea y button -->
+        <form class="formulario" action="#inicio">
+          <fieldset>
+            <legend>Crear cuenta</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="correo">Correo universitario:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera">
+              <option value="sistemas">Ingeniería de Sistemas</option>
+              <option value="administracion">Administración</option>
+              <option value="psicologia">Psicología</option>
+              <option value="enfermeria">Enfermería</option>
+            </select>
+
+            <label for="mensaje">¿Qué quieres publicar?</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+            <button type="submit">Crear cuenta</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p><small>© 2026 Aulix. Proyecto personal de diseño web y móvil.</small></p>
+  </footer>
+
+</body>
+</html>
